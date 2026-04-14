@@ -50,11 +50,17 @@ body {
   gap: 32px;
 }
 
-.game_number {
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card__number {
   font-size: 16px;
 }
 
-.gamecard-text {
+.card__title {
   font-size: 32px;
   font-weight: bold;
   width: 314px;
