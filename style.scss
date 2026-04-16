@@ -4,6 +4,46 @@
     box-sizing: border-box;
 }
 
+.promo {
+    background-color: #E1FF8F;
+    height: 800px !important;
+    background-image: url(img/promo-decorations.svg);
+    background-position: top -333px left;
+
+    &__title {
+        font-size: 64px;
+        font-weight: bold;
+        padding-top: 196px;
+        margin-left: 120px;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        margin-left: 120px;
+        font-size: 24px;
+        font-weight: normal;
+        margin-bottom: 48px;
+    }
+
+    &__button {
+        width: 247px;
+        height: 66px;
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+
+        margin-left: 120px;
+        background-color: #000;
+        padding-left: 65px;
+        padding-right: 65px;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        border-radius: 60px;
+    }
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     color: #000;
