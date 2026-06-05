@@ -5,10 +5,12 @@
 }
 
 .promo {
+    position: relative;
+
     background-color: #E1FF8F;
     height: 800px !important;
     background-image: url(img/promo-decorations.svg);
-    background-position: top -333px left;
+    background-position: top -293px left 75px;
 
     &__title {
         font-size: 64px;
@@ -42,11 +44,27 @@
 
         border-radius: 60px;
     }
+
+    &__line {
+        justify-content: flex-start;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+ 
+        transform: translateX(49%) scale(2);
+
+        width: 100%;
+    }
+
+}
+
+.promo__text_mobile {
+    display: none !important;
 }
 
 body {
     font-family: "Montserrat", sans-serif;
-    color: #000;
+    color: #000000;
 }
 
 .body-block {
@@ -58,15 +76,19 @@ body {
 
 .title {
     font-size: 64px;
-    color: #fff;
+    color: #ffffff;
     font-weight: bold;
 
     margin-bottom: 24px;
+
+    &__mobile {
+        display: none !important;
+    }
 }
 
 .paragraph-text {
     font-size: 24px;
-    color: #fff;
+    color: #ffffff;
     font-weight: lighter;
 
     margin-bottom: 72px;
@@ -84,6 +106,10 @@ body {
     display: flex;
     gap: 32px;
     align-items: flex-start;
+
+    &__mobile {
+        display: none;
+    }
 }
 
 .games__column {
@@ -184,3 +210,9 @@ body {
     justify-content: space-between;
     flex-grow: 1;
 }
+
+.footer__mob {
+    display: none;
+}
+
+@import 'mobile';
