@@ -79,6 +79,7 @@ body {
     color: #ffffff;
     font-weight: bold;
 
+    margin-top: 96px;
     margin-bottom: 24px;
 
     &__mobile {
@@ -132,7 +133,14 @@ body {
     font-size: 32px;
     font-weight: bold;
 
-    width: 314px;
+    &_mini {
+        font-size: 48px;
+        font-weight: bold;
+    }
+}
+
+.card-text {
+    font-size: 24px;
 }
 
 .card {
@@ -143,64 +151,161 @@ body {
     display: flex;
     flex-direction: column;
 
-    &_1 {
+    &__img {
+        height: 314px;
+        background-size: cover;
+        background-position: center;
+        flex-shrink: 0;
+
+        &_1 {
+            background-image: url(img/game1.png);
+        }
+
+        &_2 {
+            background-image: url(img/game2.png);
+        }
+
+        &_3 {
+            background-image: url(img/game3.png);
+        }
+
+        &_4 {
+            background-image: url(img/game4.png);
+        }
+
+        &_5 {
+            background-image: url(img/game5.png);
+        }
+
+        &_6 {
+            background-image: url(img/game6.png);
+        }
+    }
+
+    &__1 {
         height: 473px;
+        &_mini {
+            width: 500px;
+            height: 500px;
+        }
     }
 
-    &_2 {
+    &__2 {
         height: 512px;
+        &_mini {
+            width: 500px;
+            height: 500px;
+        }
     }
 
-    &_3 {
+    &__3 {
         height: 473px;
+        &_mini {
+            width: 500px;
+            height: 500px;
+        }
     }
 
-    &_4 {
+    &__4 {
         height: 551px;
+        &_mini {
+            width: 500px;
+            height: 500px;
+        }
     }
 
-    &_5 {
+    &__5 {
         height: 512px;
+        &_mini {
+            width: 500px;
+            height: 500px;
+        }
     }
 
-    &_6 {
+    &__6 {
         height: 551px;
+        &_mini {
+            width: 500px;
+            height: 500px;
+        }
     }
 
-    &__img_1 {
-        background-image: url(img/game1.png);
-    }
+    &__picture {
+        height: 500px;
 
-    &__img_2 {
-        background-image: url(img/game2.png);
-    }
+        &_1 {
+            background-image: url(img/game-card1.png);
+        }
 
-    &__img_3 {
-        background-image: url(img/game3.png);
-    }
+        &_2 {
+            background-image: url(img/game-card2.png);
+        }
 
-    &__img_4 {
-        background-image: url(img/game4.png);
-    }
+        &_3 {
+            background-image: url(img/game-card3.png);
+        }
 
-    &__img_5 {
-        background-image: url(img/game5.png);
-    }
+        &_4 {
+            background-image: url(img/game-card4.png);
+        }
 
-    &__img_6 {
-        background-image: url(img/game6.png);
+        &_5 {
+            background-image: url(img/game-card5.png);
+        }
+
+        &_6 {
+            background-image: url(img/game-card6.png);
+        }
     }
 }
 
-.card__img {
-    height: 314px;
-    background-size: cover;
-    background-position: center;
-    flex-shrink: 0;
+.mini-games {
+    margin-top: 48px;
+    flex-direction: column;
+    column-gap: 24px;
 }
 
-.card__img_1 {
-    background-image: url(img/game1.png);
+.card__1_mini,
+.card__2_mini,
+.card__3_mini,
+.card__4_mini,
+.card__5_mini,
+.card__6_mini {
+  width: 1200px;          // общая ширина карточки
+  height: 500px;          // высота карточки (как высота картинки)
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fff;
+  position: relative;     // чтобы абсолютная картинка относилась к карточке
+
+  margin-top: 32px;
+}
+
+.card__img_mini {
+  position: absolute;
+  top: 0;
+
+  width: 600px;
+  height: 500px;
+
+  background-size: cover;
+  background-position: center;
+}
+
+// Нечётные карточки: картинка справа (1, 3, 5)
+.card__1_mini .card__img_mini,
+.card__3_mini .card__img_mini,
+.card__5_mini .card__img_mini {
+  right: 0;
+  left: auto;
+}
+
+// Чётные карточки: картинка слева (2, 4, 6)
+.card__2_mini .card__img_mini,
+.card__4_mini .card__img_mini,
+.card__6_mini .card__img_mini {
+  left: 0;
+  right: auto;
 }
 
 .card__content {
@@ -209,6 +314,61 @@ body {
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
+
+    &_mini {
+        position: absolute;
+        left: 600px;            // начинаем после картинки (600px)
+        top: 0;
+        bottom: 0;
+
+        width: 600px;           // оставшаяся часть (1200 - 600)
+        padding: 20px 24px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+// Контент для нечётных карточек: слева (картинка справа)
+.card__1_mini .card__content_mini,
+.card__3_mini .card__content_mini,
+.card__5_mini .card__content_mini {
+  left: 0;
+  right: 600px;
+  width: auto;
+}
+
+// Контент для чётных карточек: справа (картинка слева)
+.card__2_mini .card__content_mini,
+.card__4_mini .card__content_mini,
+.card__6_mini .card__content_mini {
+  left: 600px;
+  right: 0;
+  width: auto;
+}
+
+.button {
+    width: 247px;
+    height: 66px;
+    border-radius: 60px;
+    color: #fff;
+    background-color: #000;
+
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.footer {
+    height: 150px;
+    background-color: #BDED35;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .footer__mob {
