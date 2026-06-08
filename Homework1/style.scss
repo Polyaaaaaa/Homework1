@@ -54,6 +54,7 @@
         transform: translateX(49%) scale(2);
 
         width: 100%;
+        overflow-x: hidden !important;
     }
 
 }
@@ -95,10 +96,19 @@ body {
     margin-bottom: 72px;
 }
 
+// .about-games {
+//     height: auto;
+//     margin-left: 119px;
+//     margin-right: 119px;
+//     padding-top: 50px;
+//     padding-bottom: 50px;
+// }
+
 .about-games {
     height: auto;
-    margin-left: 119px;
-    margin-right: 119px;
+    margin: 0 auto;
+    max-width: 1600px;
+    width: calc(100% - 238px);
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -259,11 +269,35 @@ body {
     }
 }
 
+// .mini-games {
+//     margin-top: 48px;
+//     flex-direction: column;
+//     column-gap: 24px;
+// }
+
 .mini-games {
-    margin-top: 48px;
+    margin: 48px auto 0;
+    max-width: 1200px;
+    display: flex;
     flex-direction: column;
-    column-gap: 24px;
+    row-gap: 24px;
 }
+
+// .card__1_mini,
+// .card__2_mini,
+// .card__3_mini,
+// .card__4_mini,
+// .card__5_mini,
+// .card__6_mini {
+//   width: 1200px;
+//   height: 500px;
+//   border-radius: 30px;
+//   overflow: hidden;
+//   background: #fff;
+//   position: relative;     
+
+//   margin-top: 32px;
+// }
 
 .card__1_mini,
 .card__2_mini,
@@ -271,13 +305,13 @@ body {
 .card__4_mini,
 .card__5_mini,
 .card__6_mini {
-  width: 1200px;          // общая ширина карточки
-  height: 500px;          // высота карточки (как высота картинки)
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
   border-radius: 30px;
   overflow: hidden;
   background: #fff;
-  position: relative;     // чтобы абсолютная картинка относилась к карточке
-
+  position: relative;
   margin-top: 32px;
 }
 
