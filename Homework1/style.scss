@@ -6,22 +6,26 @@
 
 .promo {
     position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-bottom: 58px;
 
     background-color: #E1FF8F;
     height: 800px !important;
     background-image: url(img/promo-decorations.svg);
+    background-repeat: no-repeat;
     background-position: top -293px left 75px;
 
     &__title {
         font-size: 64px;
         font-weight: bold;
-        padding-top: 196px;
-        margin-left: 120px;
+        padding-top: clamp(140px, 18vw, 196px);
+        margin-left: clamp(16px, 8vw, 120px);
         margin-bottom: 24px;
     }
 
     &__text {
-        margin-left: 120px;
+        margin-left: clamp(16px, 8vw, 120px);
         font-size: 24px;
         font-weight: normal;
         margin-bottom: 48px;
@@ -33,8 +37,11 @@
         font-size: 24px;
         font-weight: 600;
         color: #fff;
+        border: none;
+        cursor: pointer;
 
-        margin-left: 120px;
+        margin-left: clamp(16px, 8vw, 120px);
+        margin-bottom: 12px;
         background-color: #000;
         padding-left: 65px;
         padding-right: 65px;
@@ -45,18 +52,37 @@
         border-radius: 60px;
     }
 
-    &__line {
-        justify-content: flex-start;
+    &__line-wrap {
         position: absolute;
         bottom: 0;
         left: 0;
- 
-        transform: translateX(49%) scale(2);
-
         width: 100%;
-        overflow-x: hidden !important;
+        overflow: hidden;
     }
 
+    &__line-track {
+        display: flex;
+        width: max-content;
+        animation: promo-marquee 25s linear infinite;
+    }
+
+    &__line {
+        flex-shrink: 0;
+        display: block;
+        height: 52px;
+        width: auto;
+    }
+
+}
+
+@keyframes promo-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .promo__text_mobile {
@@ -66,6 +92,7 @@
 body {
     font-family: "Montserrat", sans-serif;
     color: #000000;
+    overflow-x: hidden;
 }
 
 .body-block {
@@ -73,6 +100,7 @@ body {
     background-image: url(img/background-stars.png);
     background-repeat: no-repeat;
     background-position: top 77px left;
+    overflow-x: hidden;
 }
 
 .title {
@@ -108,7 +136,9 @@ body {
     height: auto;
     margin: 0 auto;
     max-width: 1600px;
-    width: calc(100% - 238px);
+    width: 100%;
+    padding-left: clamp(16px, 7vw, 119px);
+    padding-right: clamp(16px, 7vw, 119px);
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -117,6 +147,7 @@ body {
     display: flex;
     gap: 32px;
     align-items: flex-start;
+    min-width: 0;
 
     &__mobile {
         display: none;
@@ -126,13 +157,24 @@ body {
 .games__column {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 32px;
+    min-width: 0;
+    width: 100%;
+    max-width: 378px;
 }
 
 .card-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
     color: inherit;
+    width: 100%;
+    max-width: 378px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 0;
 }
 
 .card__number {
@@ -154,7 +196,10 @@ body {
 }
 
 .card {
-    width: 378px;
+    width: 100%;
+    max-width: 378px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 30px;
     overflow: hidden;
     background: #fff;
@@ -194,50 +239,26 @@ body {
 
     &__1 {
         height: 473px;
-        &_mini {
-            width: 500px;
-            height: 500px;
-        }
     }
 
     &__2 {
         height: 512px;
-        &_mini {
-            width: 500px;
-            height: 500px;
-        }
     }
 
     &__3 {
         height: 473px;
-        &_mini {
-            width: 500px;
-            height: 500px;
-        }
     }
 
     &__4 {
         height: 551px;
-        &_mini {
-            width: 500px;
-            height: 500px;
-        }
     }
 
     &__5 {
         height: 512px;
-        &_mini {
-            width: 500px;
-            height: 500px;
-        }
     }
 
     &__6 {
         height: 551px;
-        &_mini {
-            width: 500px;
-            height: 500px;
-        }
     }
 
     &__picture {
@@ -276,11 +297,30 @@ body {
 // }
 
 .mini-games {
+    container-type: inline-size;
+    container-name: mini-games;
     margin: 48px auto 0;
+    width: 100%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
     row-gap: 24px;
+
+    .card__title_mini {
+        font-size: clamp(28px, 4cqi, 48px);
+    }
+
+    .card-text {
+        font-size: clamp(14px, 2cqi, 24px);
+    }
+
+    .button {
+        width: clamp(160px, 20.5cqi, 247px);
+        height: clamp(44px, 5.5cqi, 66px);
+        font-size: clamp(14px, 1.6cqi, 20px);
+        margin-top: clamp(16px, 2.5cqi, 32px);
+        margin-bottom: clamp(16px, 2.5cqi, 32px);
+    }
 }
 
 // .card__1_mini,
@@ -307,21 +347,22 @@ body {
 .card__6_mini {
   width: 100%;
   max-width: 1200px;
-  height: 500px;
-  border-radius: 30px;
+  height: auto;
+  aspect-ratio: 12 / 5;
+  border-radius: clamp(16px, 2.5cqi, 30px);
   overflow: hidden;
   background: #fff;
   position: relative;
   margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card__img_mini {
   position: absolute;
   top: 0;
-
-  width: 600px;
-  height: 500px;
-
+  width: 50%;
+  height: 100%;
   background-size: cover;
   background-position: center;
 }
@@ -351,13 +392,10 @@ body {
 
     &_mini {
         position: absolute;
-        left: 600px;            // начинаем после картинки (600px)
         top: 0;
         bottom: 0;
-
-        width: 600px;           // оставшаяся часть (1200 - 600)
-        padding: 20px 24px;
-
+        width: 50%;
+        padding: clamp(12px, 2cqi, 24px) clamp(16px, 2.5cqi, 24px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -369,22 +407,24 @@ body {
 .card__3_mini .card__content_mini,
 .card__5_mini .card__content_mini {
   left: 0;
-  right: 600px;
-  width: auto;
+  right: 50%;
+  width: 50%;
 }
 
 // Контент для чётных карточек: справа (картинка слева)
 .card__2_mini .card__content_mini,
 .card__4_mini .card__content_mini,
 .card__6_mini .card__content_mini {
-  left: 600px;
+  left: 50%;
   right: 0;
-  width: auto;
+  width: 50%;
 }
 
 .button {
     width: 247px;
     height: 66px;
+    border: none;
+    cursor: pointer;
     border-radius: 60px;
     color: #fff;
     background-color: #000;
@@ -409,4 +449,5 @@ body {
     display: none;
 }
 
+@import 'tablet';
 @import 'mobile';
