@@ -73,7 +73,7 @@
     transform: translateX(-50%);
   }
 }
-.promo__text_mobile {
+.promo__text.promo__text_mobile {
   display: none !important;
 }
 
@@ -98,7 +98,7 @@ body {
   margin-top: 96px;
   margin-bottom: 24px;
 }
-.title__mobile {
+.title_mobile {
   display: none !important;
 }
 
@@ -126,7 +126,7 @@ body {
   align-items: flex-start;
   min-width: 0;
 }
-.games__mobile {
+.games_mobile {
   display: none;
 }
 
@@ -205,22 +205,22 @@ body {
 .card__img_6 {
   background-image: url(img/game6.png);
 }
-.card__1 {
+.card_1 {
   height: 473px;
 }
-.card__2 {
+.card_2 {
   height: 512px;
 }
-.card__3 {
+.card_3 {
   height: 473px;
 }
-.card__4 {
+.card_4 {
   height: 551px;
 }
-.card__5 {
+.card_5 {
   height: 512px;
 }
-.card__6 {
+.card_6 {
   height: 551px;
 }
 .card__picture {
@@ -269,12 +269,7 @@ body {
   margin-bottom: clamp(16px, 2.5cqi, 32px);
 }
 
-.card__1_mini,
-.card__2_mini,
-.card__3_mini,
-.card__4_mini,
-.card__5_mini,
-.card__6_mini {
+.card_mini {
   width: 100%;
   max-width: 1200px;
   height: auto;
@@ -297,16 +292,16 @@ body {
   background-position: center;
 }
 
-.card__1_mini .card__img_mini,
-.card__3_mini .card__img_mini,
-.card__5_mini .card__img_mini {
+.card_mini.card_1 .card__img_mini,
+.card_mini.card_3 .card__img_mini,
+.card_mini.card_5 .card__img_mini {
   right: 0;
   left: auto;
 }
 
-.card__2_mini .card__img_mini,
-.card__4_mini .card__img_mini,
-.card__6_mini .card__img_mini {
+.card_mini.card_2 .card__img_mini,
+.card_mini.card_4 .card__img_mini,
+.card_mini.card_6 .card__img_mini {
   left: 0;
   right: auto;
 }
@@ -329,17 +324,17 @@ body {
   justify-content: center;
 }
 
-.card__1_mini .card__content_mini,
-.card__3_mini .card__content_mini,
-.card__5_mini .card__content_mini {
+.card_mini.card_1 .card__content_mini,
+.card_mini.card_3 .card__content_mini,
+.card_mini.card_5 .card__content_mini {
   left: 0;
   right: 50%;
   width: 50%;
 }
 
-.card__2_mini .card__content_mini,
-.card__4_mini .card__content_mini,
-.card__6_mini .card__content_mini {
+.card_mini.card_2 .card__content_mini,
+.card_mini.card_4 .card__content_mini,
+.card_mini.card_6 .card__content_mini {
   left: 50%;
   right: 0;
   width: 50%;
@@ -367,7 +362,7 @@ body {
   font-size: 24px;
 }
 
-.footer__mob {
+.footer.footer_mobile {
   display: none;
 }
 
@@ -486,7 +481,7 @@ body {
   .promo__line {
     height: 40px;
   }
-  .promo__text_mobile {
+  .promo__text.promo__text_mobile {
     display: block !important;
     font-size: 16px;
     margin-bottom: 24px;
@@ -497,13 +492,13 @@ body {
   }
   .about-games {
     margin: 0;
-    padding: 48px 16px;
+    padding: 0 16px;
     box-sizing: border-box;
   }
   .title {
     display: none;
   }
-  .title__mobile {
+  .title_mobile {
     display: block !important;
     font-size: 32px;
     font-weight: bold;
@@ -519,14 +514,14 @@ body {
     gap: 24px;
     display: none;
   }
-  .games__mobile {
+  .games_mobile {
     display: flex;
     flex-direction: column;
     gap: 24px;
     align-items: center;
     width: 100%;
   }
-  .games__mobile .card-link {
+  .games_mobile .card-link {
     width: min(342px, 100%);
     max-width: 342px;
     margin-left: auto;
@@ -546,33 +541,33 @@ body {
     border-radius: 20px;
     row-gap: 24px;
   }
-  .games__mobile .card {
+  .games_mobile .card {
     width: 100%;
     max-width: 342px;
     margin-left: 0;
     margin-right: 0;
   }
-  .games__mobile .card__img {
+  .games_mobile .card__img {
     width: 100%;
     max-width: 100%;
     height: 220px;
     position: relative;
   }
-  .games__mobile .card__picture {
+  .games_mobile .card__picture {
     height: 220px;
   }
-  .games__mobile .card__content_mini {
+  .games_mobile .card__content_mini {
     position: static;
     width: 100%;
     left: auto;
     right: auto;
     padding: 16px;
   }
-  .games__mobile .card__title {
+  .games_mobile .card__title {
     font-size: 24px;
     margin-bottom: 8px;
   }
-  .card-text__mob {
+  .card-text_mobile {
     font-size: 16px;
     line-height: 1.4;
     margin-bottom: 16px;
@@ -601,7 +596,7 @@ body {
     margin-top: 32px;
     margin-bottom: 32px;
   }
-  .footer__mob {
+  .footer.footer_mobile {
     display: flex;
     height: 100px;
     background-color: #BDED35;

@@ -85,7 +85,7 @@
     }
 }
 
-.promo__text_mobile {
+.promo__text.promo__text_mobile {
     display: none !important;
 }
 
@@ -111,7 +111,7 @@ body {
     margin-top: 96px;
     margin-bottom: 24px;
 
-    &__mobile {
+    &_mobile {
         display: none !important;
     }
 }
@@ -149,7 +149,7 @@ body {
     align-items: flex-start;
     min-width: 0;
 
-    &__mobile {
+    &_mobile {
         display: none;
     }
 }
@@ -237,27 +237,27 @@ body {
         }
     }
 
-    &__1 {
+    &_1 {
         height: 473px;
     }
 
-    &__2 {
+    &_2 {
         height: 512px;
     }
 
-    &__3 {
+    &_3 {
         height: 473px;
     }
 
-    &__4 {
+    &_4 {
         height: 551px;
     }
 
-    &__5 {
+    &_5 {
         height: 512px;
     }
 
-    &__6 {
+    &_6 {
         height: 551px;
     }
 
@@ -323,12 +323,7 @@ body {
     }
 }
 
-// .card__1_mini,
-// .card__2_mini,
-// .card__3_mini,
-// .card__4_mini,
-// .card__5_mini,
-// .card__6_mini {
+// .card_mini {
 //   width: 1200px;
 //   height: 500px;
 //   border-radius: 30px;
@@ -337,14 +332,7 @@ body {
 //   position: relative;     
 
 //   margin-top: 32px;
-// }
-
-.card__1_mini,
-.card__2_mini,
-.card__3_mini,
-.card__4_mini,
-.card__5_mini,
-.card__6_mini {
+.card_mini {
   width: 100%;
   max-width: 1200px;
   height: auto;
@@ -367,18 +355,16 @@ body {
   background-position: center;
 }
 
-// Нечётные карточки: картинка справа (1, 3, 5)
-.card__1_mini .card__img_mini,
-.card__3_mini .card__img_mini,
-.card__5_mini .card__img_mini {
+.card_mini.card_1 .card__img_mini,
+.card_mini.card_3 .card__img_mini,
+.card_mini.card_5 .card__img_mini {
   right: 0;
   left: auto;
 }
 
-// Чётные карточки: картинка слева (2, 4, 6)
-.card__2_mini .card__img_mini,
-.card__4_mini .card__img_mini,
-.card__6_mini .card__img_mini {
+.card_mini.card_2 .card__img_mini,
+.card_mini.card_4 .card__img_mini,
+.card_mini.card_6 .card__img_mini {
   left: 0;
   right: auto;
 }
@@ -402,19 +388,17 @@ body {
     }
 }
 
-// Контент для нечётных карточек: слева (картинка справа)
-.card__1_mini .card__content_mini,
-.card__3_mini .card__content_mini,
-.card__5_mini .card__content_mini {
+.card_mini.card_1 .card__content_mini,
+.card_mini.card_3 .card__content_mini,
+.card_mini.card_5 .card__content_mini {
   left: 0;
   right: 50%;
   width: 50%;
 }
 
-// Контент для чётных карточек: справа (картинка слева)
-.card__2_mini .card__content_mini,
-.card__4_mini .card__content_mini,
-.card__6_mini .card__content_mini {
+.card_mini.card_2 .card__content_mini,
+.card_mini.card_4 .card__content_mini,
+.card_mini.card_6 .card__content_mini {
   left: 50%;
   right: 0;
   width: 50%;
@@ -445,7 +429,7 @@ body {
     font-size: 24px;
 }
 
-.footer__mob {
+.footer.footer_mobile {
     display: none;
 }
 
