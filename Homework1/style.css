@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .promo {
   position: relative;
   overflow: hidden;
@@ -44,6 +48,7 @@
   padding-top: 16px;
   padding-bottom: 16px;
   border-radius: 60px;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 .promo__line-wrap {
   position: absolute;
@@ -180,6 +185,8 @@ body {
   background: #fff;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
 }
 .card__img {
   height: 314px;
@@ -350,6 +357,22 @@ body {
   background-color: #000;
   margin-top: 32px;
   margin-bottom: 32px;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .promo__button:hover,
+  .button:hover {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+  .games:not(.games_mobile) .card:hover,
+  .card_mini:hover {
+    transform: scale(1.04);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+    z-index: 1;
+  }
 }
 
 .footer {
@@ -595,6 +618,12 @@ body {
     background-color: #000;
     margin-top: 32px;
     margin-bottom: 32px;
+  }
+  .promo__button:hover,
+  .button:hover {
+    color: #fff;
+    background-color: #000;
+    border: none;
   }
   .footer.footer_mobile {
     display: flex;

@@ -225,6 +225,13 @@
         margin-bottom: 32px;
     }
 
+    .promo__button:hover,
+    .button:hover {
+        color: #fff;
+        background-color: #000;
+        border: none;
+    }
+
     .footer.footer_mobile {
         display: flex;
         height: 100px;

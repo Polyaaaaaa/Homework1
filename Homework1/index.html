@@ -24,7 +24,7 @@
             <div class="promo__text promo__text_mobile">
                 Тебе предстоит пройти несколько увлекательных игр. Если готов,<br> нажимай «Поехали!» и приступай.
             </div>
-            <button type="submit" class="promo__button">Поехали!</button>
+            <button type="button" class="promo__button">Поехали!</button>
 
             <div class="promo__line-wrap">
                 <div class="promo__line-track">
@@ -46,7 +46,7 @@
             <div class="games">
                 <div class="games__column">
                     <a href="#" class="card-link">
-                        <div class="card card_1">
+                        <div class="card card_1" data-game="1">
                             <div class="card__img card__img_1"></div>
                             <div class="card__content">
                                 <span class="card__number">Игра №1</span>
@@ -55,7 +55,7 @@
                         </div>
                     </a>
                     <a href="#" class="card-link">
-                        <div class="card card_4">
+                        <div class="card card_4" data-game="4">
                             <div class="card__img card__img_4"></div>
                             <div class="card__content">
                                 <span class="card__number">Игра №4</span>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="games__column">
                     <a href="#" class="card-link">
-                        <div class="card card_2">
+                        <div class="card card_2" data-game="2">
                             <div class="card__img card__img_2"></div>
                             <div class="card__content">
                                 <span class="card__number">Игра №2</span>
@@ -75,7 +75,7 @@
                         </div>
                     </a>
                     <a href="#" class="card-link">
-                        <div class="card card_5">
+                        <div class="card card_5" data-game="5">
                             <div class="card__img card__img_5"></div>
                             <div class="card__content">
                                 <span class="card__number">Игра №5</span>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="games__column">
                     <a href="#" class="card-link">
-                        <div class="card card_3">
+                        <div class="card card_3" data-game="3">
                             <div class="card__img card__img_3"></div>
                             <div class="card__content">
                                 <span class="card__number">Игра №3</span>
@@ -95,7 +95,7 @@
                         </div>
                     </a>
                     <a href="#" class="card-link">
-                        <div class="card card_6">
+                        <div class="card card_6" data-game="6">
                             <div class="card__img card__img_6"></div>
                             <div class="card__content">
                                 <span class="card__number">Игра №6</span>
@@ -176,7 +176,7 @@
             <div class="title">Мини-игры</div>
 
                 <div class="mini-games">
-                    <div class="card card_mini card_1">
+                    <div class="card card_mini card_1" id="game-1">
                         <div class="card__img card__img_mini card__picture card__picture_1"></div>
                         <div class="card__content card__content_mini">
                             <h3 class="card__title card__title_mini">Угадай число</h3>
@@ -185,7 +185,7 @@
                         </div>
                     </div>
 
-                    <div class="card card_mini card_2">
+                    <div class="card card_mini card_2" id="game-2">
                         <div class="card__img card__img_mini card__img_2"></div>
                         <div class="card__content card__content_mini">
                             <h3 class="card__title card__title_mini">Простая арифметика</h3>
@@ -194,7 +194,7 @@
                         </div>
                     </div>
 
-                    <div class="card card_mini card_3">
+                    <div class="card card_mini card_3" id="game-3">
                         <div class="card__img card__img_mini card__img_3"></div>
                         <div class="card__content card__content_mini">
                             <h3 class="card__title card__title_mini">Переверни текст</h3>
@@ -203,7 +203,7 @@
                         </div>
                     </div>
 
-                    <div class="card card_mini card_4">
+                    <div class="card card_mini card_4" id="game-4">
                         <div class="card__img card__img_mini card__img_4"></div>
                         <div class="card__content card__content_mini">
                             <h3 class="card__title card__title_mini">Камень, ножницы,<br> бумага</h3>
@@ -212,7 +212,7 @@
                         </div>
                     </div>
                     
-                    <div class="card card_mini card_5">
+                    <div class="card card_mini card_5" id="game-5">
                         <div class="card__img card__img_mini card__img_5"></div>
                         <div class="card__content card__content_mini">
                             <h3 class="card__title card__title_mini">Простая викторина</h3>
@@ -221,7 +221,7 @@
                         </div>
                     </div>
                 
-                    <div class="card card_mini card_6">
+                    <div class="card card_mini card_6" id="game-6">
                         <div class="card__img card__img_mini card__img_6"></div>
                         <div class="card__content card__content_mini">
                             <h3 class="card__title card__title_mini">Генератор случайных<br> цветов</h3>
@@ -242,5 +242,6 @@
             Все права защищены
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
