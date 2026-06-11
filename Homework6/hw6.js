@@ -1,47 +1,47 @@
 // Задание 1
-let data = [1, 5, 4, 10, 0, 3];
+let data1 = [1, 5, 4, 10, 0, 3];
 
-for (let i = 0; i < data.length; i++) {
+for (let i = 0; i < data1.length; i++) {
   console.log(data[i]);
-  if (data[i] === 10) break;
+  if (data1[i] === 10) break;
 }
 
 // Задание 2
-let data = [1, 5, 4, 10, 0, 3];
-console.log(data.indexOf(4));
+let data2 = [1, 5, 4, 10, 0, 3];
+console.log(data2.indexOf(4));
 
 // Задание 3
-let data = [1, 3, 5, 10, 20];
-console.log(data.join(' '));
+let data3 = [1, 3, 5, 10, 20];
+console.log(data3.join(' '));
 
 // Задание 4
-let data = [];
+let data4 = [];
 
 for (let i = 0; i < 3; i++) {
-  data[i] = [];
+  data4[i] = [];
   for (let j = 0; j < 3; j++) {
-    data[i][j] = 1;
+    data4[i][j] = 1;
   }
 }
 
-console.log(data);v
+console.log(data4);v
 
 // Задание 5
-let data = [1, 1, 1];
-data.push(2, 2, 2);
-console.log(data);
+let data5 = [1, 1, 1];
+data5.push(2, 2, 2);
+console.log(data5);
 
 // Задание 6
-let data = [9, 8, 7, 'a', 6, 5];
-data.sort();
-data.pop();
-console.log(data);
+let data6 = [9, 8, 7, 'a', 6, 5];
+data6.sort();
+data6.pop();
+console.log(data6);
 
 // Задание 7
-let data = [9, 8, 7, 6, 5];
+let data7 = [9, 8, 7, 6, 5];
 let num = Number(prompt('Угадайте число'));
 
-if (data.includes(num)) {
+if (data7.includes(num)) {
   alert('Угадал');
 } else {
   alert('Не угадал');
@@ -52,21 +52,21 @@ let str = 'abcdef';
 console.log(str.split('').reverse().join(''));
 
 // Задание 9
-let data = [[1, 2, 3], [4, 5, 6]];
+let data9 = [[1, 2, 3], [4, 5, 6]];
 console.log(data.flat());
 
 // Задание 10
-let data = [2, 4, 6, 8, 10];
+let data10 = [2, 4, 6, 8, 10];
 
-for (let i = 0; i < data.length - 1; i++) {
-  console.log(data[i] + data[i + 1]);
+for (let i = 0; i < data10.length - 1; i++) {
+  console.log(data10[i] + data10[i + 1]);
 }
 
 // Задание 11
-function getSquares(data) {
+function getSquares(data11) {
   let result = [];
-  for (let i = 0; i < data.length; i++) {
-    result.push(data[i] ** 2);
+  for (let i = 0; i < data11.length; i++) {
+    result.push(data11[i] ** 2);
   }
   return result;
 }
@@ -74,10 +74,10 @@ function getSquares(data) {
 console.log(getSquares([1, 2, 3]));
 
 // Задание 12
-function getWordLengths(data) {
+function getWordLengths(data12) {
   let result = [];
-  for (let i = 0; i < data.length; i++) {
-    result.push(data[i].length);
+  for (let i = 0; i < data12.length; i++) {
+    result.push(data12[i].length);
   }
   return result;
 }
@@ -85,10 +85,10 @@ function getWordLengths(data) {
 console.log(getWordLengths(['hello', 'hi', 'JavaScript']));
 
 // Задание 13
-function getNegative(data) {
+function getNegative(data13) {
   let result = [];
-  for (let i = 0; i < data.length; i++) {
-    if (data[i] < 0) result.push(data[i]);
+  for (let i = 0; i < data13.length; i++) {
+    if (data13[i] < 0) result.push(data13[i]);
   }
   return result;
 }
@@ -96,34 +96,34 @@ function getNegative(data) {
 console.log(getNegative([1, -2, 3, -4, 5]));
 
 // Задание 14
-let data = [];
+let data14 = [];
 let evendata = [];
 
 for (let i = 0; i < 10; i++) {
-  data.push(Math.floor(Math.random() * 11));
+  data14.push(Math.floor(Math.random() * 11));
 }
 
-for (let i = 0; i < data.length; i++) {
-  if (data[i] % 2 === 0) {
-    evendata.push(data[i]);
+for (let i = 0; i < data14.length; i++) {
+  if (data14[i] % 2 === 0) {
+    evendata.push(data14[i]);
   }
 }
 
-console.log(data);
+console.log(data14);
 console.log(evendata);
 
 // Задание 15
-let data = [];
+let data15 = [];
 
 for (let i = 0; i < 6; i++) {
-  data.push(Math.floor(Math.random() * 10) + 1);
+  data15.push(Math.floor(Math.random() * 10) + 1);
 }
 
 let sum = 0;
-for (let i = 0; i < data.length; i++) {
-  sum += data[i];
+for (let i = 0; i < data15.length; i++) {
+  sum += data15[i];
 }
 
-let average = sum / data.length;
-console.log(data);
+let average = sum / data15.length;
+console.log(data15);
 console.log(average);
