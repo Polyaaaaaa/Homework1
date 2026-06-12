@@ -1,0 +1,65 @@
+@media (max-width: 1250px) {
+    .promo {
+        height: clamp(620px, 74vh, 800px) !important;
+        background-repeat: no-repeat;
+        background-size: clamp(520px, 68vw, 860px);
+        background-position: right clamp(-48px, -10vw, -38px) top clamp(-138px, -7vw, -88px);
+        padding-bottom: 58px;
+
+        &__title {
+            font-size: clamp(40px, 5vw, 64px);
+            padding-top: clamp(110px, 13vw, 175px);
+        }
+
+        &__text {
+            margin-bottom: clamp(28px, 4vw, 48px);
+        }
+
+        &__button {
+            margin-bottom: 16px;
+        }
+    }
+
+    .games {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .games__column {
+        flex: 0 1 378px;
+        width: 100%;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-link {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .promo {
+        background-image: url(img/promo-decorations-mobile.svg);
+        background-size: clamp(260px, 50vw, 400px);
+        background-position: right clamp(-10px, -1vw, 12px) top clamp(-55px, -7vw, -25px);
+    }
+
+    .games__column {
+        flex: 0 1 100%;
+        width: 100%;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
