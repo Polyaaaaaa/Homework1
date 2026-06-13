@@ -306,6 +306,20 @@ body {
   left: auto;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .promo__button:hover,
+  .button:hover {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+  .games:not(.games_mobile) .card:hover,
+  .card_mini:hover {
+    transform: scale(1.04);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+    z-index: 1;
+  }
+}
 .card_mini.card_2 .card__img_mini,
 .card_mini.card_4 .card__img_mini,
 .card_mini.card_6 .card__img_mini {
@@ -358,21 +372,6 @@ body {
   margin-top: 32px;
   margin-bottom: 32px;
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .promo__button:hover,
-  .button:hover {
-    color: #000;
-    background-color: #fff;
-    border: 1px solid #000;
-  }
-  .games:not(.games_mobile) .card:hover,
-  .card_mini:hover {
-    transform: scale(1.04);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
-    z-index: 1;
-  }
 }
 
 .footer {

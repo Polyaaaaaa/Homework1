@@ -59,3 +59,72 @@ for (let i = 0; i < quiz.length; i++) {
 }
 
 alert(`Правильных ответов: ${correctAnswers}`);
+
+
+// игра «Угадай число»
+
+function guessNumberGame() {
+  let randomNumber = Math.floor(Math.random() * 100) + 1;
+  let userAnswer;
+
+  while (true) {
+    userAnswer = Number(prompt('Угадай число от 1 до 100'));
+
+    if (isNaN(userAnswer)) {
+      alert('Введите число');
+    } else if (userAnswer < randomNumber) {
+      alert('Больше');
+    } else if (userAnswer > randomNumber) {
+      alert('Меньше');
+    } else {
+      alert('Вы угадали!');
+      break;
+    }
+  }
+}
+
+// игра «Простая арифметика»
+
+function simpleArithmeticGame() {
+  const num1 = Math.floor(Math.random() * 10) + 1;
+  const num2 = Math.floor(Math.random() * 10) + 1;
+  const operations = ['+', '-', '*', '/'];
+  const operation = operations[Math.floor(Math.random() * operations.length)];
+
+  let correctAnswer;
+
+  if (operation === '+') {
+    correctAnswer = num1 + num2;
+  } else if (operation === '-') {
+    correctAnswer = num1 - num2;
+  } else if (operation === '*') {
+    correctAnswer = num1 * num2;
+  } else {
+    correctAnswer = num1 / num2;
+  }
+
+  let userAnswer = Number(prompt(`Реши пример: ${num1} ${operation} ${num2}`));
+
+  if (userAnswer === correctAnswer) {
+    alert('Верно!');
+  } else {
+    alert(`Ошибка. Правильный ответ: ${correctAnswer}`);
+  }
+}
+
+// игра «Переверни текст»
+
+function reverseTextGame() {
+  let text = prompt('Введите текст');
+
+  if (text === null) {
+    return;
+  }
+
+  let reversed = text.split('').reverse().join('');
+  alert(reversed);
+}
+
+document.querySelector('.button_guess').addEventListener('click', guessNumberGame);
+document.querySelector('.button_math').addEventListener('click', simpleArithmeticGame);
+document.querySelector('.button_reverse').addEventListener('click', reverseTextGame);
