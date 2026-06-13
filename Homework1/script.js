@@ -26,39 +26,41 @@ document.querySelectorAll('.games:not(.games_mobile) .card[data-game]').forEach(
     });
 });
 
-// квиз
+// квиз игра
 
-const quiz = [
-  {
-    question: "Какой цвет небо?",
-    options: ["1. Красный", "2. Синий", "3. Зеленый"],
-    correctAnswer: 2
-  },
-  {
-    question: "Сколько дней в неделе?",
-    options: ["1. Шесть", "2. Семь", "3. Восемь"],
-    correctAnswer: 2
-  },
-  {
-    question: "Сколько у человека пальцев на одной руке?",
-    options: ["1. Четыре", "2. Пять", "3. Шесть"],
-    correctAnswer: 2
+function quizGame() {
+  const quiz = [
+    {
+      question: "Какой цвет небо?",
+      options: ["1. Красный", "2. Синий", "3. Зеленый"],
+      correctAnswer: 2
+    },
+    {
+      question: "Сколько дней в неделе?",
+      options: ["1. Шесть", "2. Семь", "3. Восемь"],
+      correctAnswer: 2
+    },
+    {
+      question: "Сколько у человека пальцев на одной руке?",
+      options: ["1. Четыре", "2. Пять", "3. Шесть"],
+      correctAnswer: 2
+    }
+  ];
+
+  let correctAnswers = 0;
+
+  for (let i = 0; i < quiz.length; i++) {
+    let userAnswer = Number(
+      prompt(quiz[i].question + "\n" + quiz[i].options.join("\n"))
+    );
+
+    if (userAnswer === quiz[i].correctAnswer) {
+      correctAnswers++;
+    }
   }
-];
 
-let correctAnswers = 0;
-
-for (let i = 0; i < quiz.length; i++) {
-  let userAnswer = Number(
-    prompt(quiz[i].question + "\n" + quiz[i].options.join("\n"))
-  );
-
-  if (userAnswer === quiz[i].correctAnswer) {
-    correctAnswers++;
-  }
+  alert(`Правильных ответов: ${correctAnswers}`);
 }
-
-alert(`Правильных ответов: ${correctAnswers}`);
 
 
 // игра «Угадай число»
@@ -155,7 +157,17 @@ function rockPaperScissorsGame() {
   alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\n${result}`);
 }
 
+// игра «Генератор случайных цветов»
+const footer = document.querySelector('.footer');
+
+function randomColorGame() {
+  const color = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+  footer.style.backgroundColor = color;
+}
+
 document.querySelector('.button_guess').addEventListener('click', guessNumberGame);
 document.querySelector('.button_math').addEventListener('click', simpleArithmeticGame);
 document.querySelector('.button_reverse').addEventListener('click', reverseTextGame);
 document.querySelector('.button_rps').addEventListener('click', rockPaperScissorsGame);
+document.querySelector('.button_color').addEventListener('click', randomColorGame);
+document.querySelector('.button_quiz').addEventListener('click', quizGame);
