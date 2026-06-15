@@ -125,6 +125,37 @@ function reverseTextGame() {
   alert(reversed);
 }
 
+// игра «Камень, ножницы, бумага»
+
+function rockPaperScissorsGame() {
+  const choices = ['камень', 'ножницы', 'бумага'];
+  const userChoice = prompt('Выберите: камень, ножницы или бумага')?.toLowerCase();
+
+  if (!choices.includes(userChoice)) {
+    alert('Некорректный выбор');
+    return;
+  }
+
+  const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+  let result = '';
+
+  if (userChoice === computerChoice) {
+    result = 'Ничья';
+  } else if (
+    (userChoice === 'камень' && computerChoice === 'ножницы') ||
+    (userChoice === 'ножницы' && computerChoice === 'бумага') ||
+    (userChoice === 'бумага' && computerChoice === 'камень')
+  ) {
+    result = 'Вы победили';
+  } else {
+    result = 'Вы проиграли';
+  }
+
+  alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\n${result}`);
+}
+
 document.querySelector('.button_guess').addEventListener('click', guessNumberGame);
 document.querySelector('.button_math').addEventListener('click', simpleArithmeticGame);
 document.querySelector('.button_reverse').addEventListener('click', reverseTextGame);
+document.querySelector('.button_rps').addEventListener('click', rockPaperScissorsGame);
